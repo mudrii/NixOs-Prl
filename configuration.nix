@@ -48,6 +48,15 @@
   #   useXkbConfig = true; # use xkbOptions in tty.
   # };
 
+  fonts = {
+    fontDir.enable = true;
+    fonts = with pkgs; [
+      powerline-fonts
+#      nerdfonts
+      (nerdfonts.override { fonts = [ "Meslo" ]; })
+    ];
+  };
+
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
