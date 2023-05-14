@@ -85,6 +85,7 @@
   users = {
     users.mudrii = {
       isNormalUser = true;
+      shell = pkgs.fish;
       extraGroups = [ "wheel" ];
       # mkpasswd -m sha-512 password
       hashedPassword = "$6$ewXNcoQRNG$czTic9vE8CGH.eo4mabZsHVRdmTjtJF4SdDnIK0O/4STgzB5T2nD3Co.dRpVS3/uDD24YUxWrTDy2KRv7m/3N1";

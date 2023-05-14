@@ -8,7 +8,7 @@
       historyLimit = 406000; # Up the history limit
       prefix = "C-a";
       baseIndex = 1; # Index windows from 1
-      mouse = true;
+#      mouse = true;
       shell = "${pkgs.fish}/bin/fish";
       plugins = with pkgs; [
         tmuxPlugins.better-mouse-mode
