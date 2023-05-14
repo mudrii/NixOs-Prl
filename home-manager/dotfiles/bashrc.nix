@@ -8,10 +8,10 @@
         historyFileSize = 1000000;
         historySize = 100000;
         initExtra = ''
-          source ~/.git-completion.bash
-          source ~/.git-prompt.sh
-          export INPUTRC=~/.inputrc
-          eval "$(direnv hook bash)"
+#          source ~/.git-completion.bash
+#          source ~/.git-prompt.sh
+#          export INPUTRC=~/.inputrc
+#          eval "$(direnv hook bash)"
           PS1="\n\[\033[1;32m\]\e[0;31m[\[\e]0;\u@\h: \w\a\]\e[01;32m\u@\[\e[1;34m\]\h:\[\e[01;36m\]\w\[\e[01;32m\]\e[0;31m]\[\033[0m\]\$(__git_ps1)\[\e[01;32m\]\$\[\033[0m\] "
         '';
         shellAliases = {
@@ -71,16 +71,16 @@
       };
     };
 
-    home = {
-      file = {
-        git-completion = {
-          source = ./.git-completion.bash;
-          target = ".git-completion.bash";
-        };
-        git-prompt = {
-          source = ./.git-prompt.sh;
-          target = ".git-prompt.sh";
-        };
-      };
-    };
+#    home = {
+#      file = {
+#        git-completion = {
+#          source = ./.git-completion.bash;
+#          target = ".git-completion.bash";
+#        };
+#        git-prompt = {
+#          source = ./.git-prompt.sh;
+#          target = ".git-prompt.sh";
+#        };
+#      };
+#    };
 }
