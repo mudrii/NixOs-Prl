@@ -36,10 +36,11 @@
       vimPlugins.vim-snippets
       vimPlugins.vim-commentary
       vimPlugins.undotree
+      vimPlugins.vim-tmux-navigator
     ];
     extraConfig = ''
       "set shell=sh
-    
+
       let g:airline_powerline_fonts = 1
       if !exists('g:airline_symbols')
         let g:airline_symbols = {}
@@ -95,7 +96,6 @@
       
       " General Config
       set exrc " open .vimrc from current folder
-      set exrc " open .vimrc from current folder
       set guicursor= " set cursor as block
       set nowrap " do not wrap the test
       set signcolumn=yes " always show extra column to the left for linting etc
@@ -146,7 +146,8 @@
       set shiftround " round indent to a multiple of 'shiftwidth'
       set expandtab
       
-      set clipboard=unnamed      
+      set clipboard=unnamed
+      
       " faster redrawing
       set ttyfast
       

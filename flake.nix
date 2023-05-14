@@ -38,10 +38,10 @@
                 home-manager = {
                   useGlobalPkgs = true;
                   useUserPackages = true;
-	          users.mudrii = import ./home-manager;
-                };
-               }
-	     ];
+	                users.mudrii = import ./home-manager;
+                  };
+                }
+	            ];
             }
           )
         ];

@@ -24,11 +24,14 @@
     };
   };
 
-  networking.hostName = "nixprl"; # Define your hostname.
+  networking = {
+    hostName = "nixprl";
+    interfaces.enp0s5.useDHCP = true;
+  };
+  # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-  networking.interfaces.enp0s5.useDHCP = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Singapore";
@@ -107,9 +110,13 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-  services.openssh.passwordAuthentication = true;
-  services.openssh.permitRootLogin = "yes";
+  services = {
+    openssh = {
+      enable = true;
+      passwordAuthentication = true;
+      permitRootLogin = "yes";
+    };
+  };
 
   security.sudo.wheelNeedsPassword = false;
 
@@ -120,8 +127,10 @@
    networking.firewall.enable = false;
 
   # Lots of stuff that uses aarch64 that claims doesn't work, but actually works.
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnsupportedSystem = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+    config.allowUnsupportedSystem = true;
+  };
 
   nix = {
     # use unstable nix so we can access flakes
